@@ -1,12 +1,26 @@
-import {Controller, Get} from "@nestjs/common"
+import {Controller, Get,Post,Put,Delete} from "@nestjs/common"
 
 
-@Controller( )
+@Controller('report/income')
 export class AppController{
-  @Get('report/income')
+  @Get()
   getAllIncomeReports(){
     return []
   }
 
+  @Post()
+  createReport(){
+    return "created"
+  }
+  
+  @Put(':id')
+  getReportById(){
+    return "updated"
+  }
+
+  @Delete(':id')
+  deleteReport(){
+    return 'delete'
+  }
 
 }
